@@ -1,0 +1,29 @@
+<h2>Convert any <span class="caps">POP</span> mailbox to <span class="caps">IMAP</span></h2>
+<p class="publish_date">05 Jan 2010</p>
+<p>I have multiple computers and an iPhone.  I use Apple Mail and I want all my email to be synchronized.  I don&#8217;t want to read the same message twice.  My primary account is a gmail account but I have a few other accounts at spokt.com.  The secret to this simple hack is to use wrap your pop mailbox with a gmail account and enable <span class="caps">IMAP</span>.</p>
+<h3>Step 1: Create a Gmail proxy account.</h3>
+<p>Invite your <span class="caps">POP</span> account to gmail (or open a new account from scratch)  If you address is bill@lambier.com you could set up bill_lambier@gmail.com.  We&#8217;ll call this the gmail proxy account.</p>
+<h3>Step 2: Configure Gmail Ready</h3>
+<ul>
+	<li>Log into gmail account and do the following under &#8220;Settings&#8221;:</li>
+	<li>Forwarding and <span class="caps">POP</span>/<span class="caps">IMAP</span> &#8211; click &#8220;Enable <span class="caps">IMAP</span>&#8221; and &#8220;Save Changes&#8221;</li>
+	<li>Change to the &#8220;Accounts and Import&#8221; tab then &#8220;Add POP3 email account&#8221;</li>
+	<li>Enter your POP3 account info</li>
+</ul>
+<h3>Step 3: Setup Account in Mail</h3>
+<ul>
+	<li>In Mail open preferences (Cmd+,).</li>
+	<li>Click Accounts</li>
+	<li>Click the + in the lower-left corner</li>
+	<li>Enter your gmail address (bill_lambier@gmail.com) and password</li>
+</ul>
+<p>You can repeat step 3 on all your devices and you mail will be synchronized.  Plus you can log into the gmail web interface which is good too.  Simple hack, simple pleasures.</p>
+<h3>Update: Sending Mail isn&#8217;t quite as simple.</h3>
+<p>I tried configuring gmail to send email as though it were coming from the <span class="caps">POP</span> account.  It works from the gmail web interface but Mail sends from the gmail address.  To work around this I had to configure my gmail proxy account to send mail through the smtp:</p>
+<ul>
+	<li>Preferences &#8594; Accounts &#8594; Select gmail proxy account.</li>
+	<li>Outgoing Mail Server (<span class="caps">SMTP</span>): Click Edit <span class="caps">SMTP</span> Server List</li>
+	<li>Click + to add a new account.  Enter your <span class="caps">SMTP</span> information</li>
+	<li>choose it for this account.</li>
+</ul>
+<p>Unfortunately these messages won&#8217;t be stored at gmail&#8230; still looking for a way around this.  Probably overlooking something.</p>

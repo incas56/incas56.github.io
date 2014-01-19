@@ -1,0 +1,36 @@
+<h2>Ruby Mixins</h2>
+<p class="publish_date">15 Jan 2009</p>
+<p>Q. What happens when you include two modules that define the same method in one class?</p>
+<p>A. The method in the module added last is called!</p>
+<pre name="code" class="ruby">
+module Tiger
+  def talk
+    "prrrrr!"
+  end
+end
+module Lion
+  def talk
+    "roar!"
+  end
+end
+
+class Liger
+  include Lion
+  include Tiger
+end
+
+class Tigon
+  include Tiger
+  include Lion
+end
+
+tigon = Tigon.new
+puts "a tigon says #{tigon.talk}"
+
+liger = Liger.new
+puts "a liger says #{liger.talk}"
+</pre><pre class="terminal">
+$ ruby cats.rb
+a tigon says roar!
+a liger says prrrrr!
+</pre>
