@@ -1,7 +1,6 @@
 ---
 layout: post
-title: Rails Shock
-category: study
+title: Shock
 ---
 
 h2. {{ page.title }}
