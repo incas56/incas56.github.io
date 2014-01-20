@@ -1,0 +1,10 @@
+---
+layout: post
+title: 好好学习，天天向上
+---
+
+h2. {{ page.title }}
+
+p(publish_date). 10 Apr 2008
+
+<p>我们</p>
