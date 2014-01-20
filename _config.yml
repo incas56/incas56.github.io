@@ -1,0 +1,8 @@
+safe:        false
+auto:        false
+
+
+
+future:      true
+lsi:         false
+pygments:    false
