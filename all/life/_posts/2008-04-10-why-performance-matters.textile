@@ -7,7 +7,7 @@ h2. {{ page.title }}
 
 p(publish_date). 10 Apr 2008
 
-<p>I just watched <a href="http://www.youtube.com/watch?v=4XpnKHJAok8">this presentation on git* by Linus Torvalds</a>.   The highlight for me:</p>
+<p>我们</a>.   The highlight for me:</p>
 
 <blockquote>
 "A lot of people seem to think that performance is about doing the same thing just doing it faster and that's not true.  That's not what performance is all about.  If you can do something really really fast, really well, people start using it different."</blockquote>
