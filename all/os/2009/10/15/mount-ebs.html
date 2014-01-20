@@ -1,9 +1,0 @@
-<h2>Mount <span class="caps">EBS</span> Volume</h2>
-<p class="publish_date">15 Oct 2009</p>
-<p>I use RightScale to manage my EC2 environment. I recently was unable to create a bundle of one of my servers and discovered the problem was I was running out of disk space.  I was using 2.7GB of 10GB but the bundle image would use up the rest of the disk and fail.  How can you get more space? Elastic Block Storage (<span class="caps">ESB</span>).</p>
-<h3>Step 1: Create &amp; Attach <span class="caps">ESB</span></h3>
-<p>In RightScale click &#8220;Clouds&#8221; then Navigate to <span class="caps">AWS</span> US &#8594; <span class="caps">EBS</span> Volumes &#8211; New.  Fill out the form (I needed 10GB &#8211; it will also be easier to follow along here if you choose /dev/sdm).  Navigate to the volume you created and click the &#8220;Attach&#8221; button. This will allow you to choose a server.</p>
-<h3>Step 2: Format &amp; Mount</h3>
-<p>Follow steps here: <a href="https://learningspaces.njit.edu/content/how-format-and-mount-ebs-volume">how format and mount ebs volume</a>. Except mount to /mnt instead of /data.  If you do mount to data you can also mount to /mnt without issue: mount /dev/sdm /mnt</p>
-<h3>Step 3: Create Bundle</h3>
-<p>Navigate to your server in RightScale and click the bundle button.  It should work now.  You can monitor your disk space on your server using the &#8220;df -h&#8221; command.</p>
