@@ -1,0 +1,13 @@
+---
+layout: post
+title: some useful R packages
+---
+
+h2. {{ page.title }}
+
+p(publish_date). 21 Jan 2014
+
+p. 关于数据处理的常用包，要熟练掌握：
+
+h3. 
+
