@@ -37,16 +37,16 @@ Now rake the migration:
 
 Now that we have a foreign key in the table we need to tell the CookBook model that it has many Recipes and the Recipe model that it belongs to a CookBook.  So we open the model files in the app/model directory and add the lines shown below.
 
-<pre name="code" class="ruby">
-class Cookbook < ActiveRecord::Base
-  has_many :recipes
-end
+<pre name="code" class="R">
+install.packages('plyr')
+rnorm(10)
+x <- 1:10
 </pre>
 
-<pre name="code" class="ruby">
-class Recipe < ActiveRecord::Base
-  belongs_to :cookbook 
-end
+<pre name="code" class="r">
+install.packages('plyr')
+rnorm(10)
+x <- 1:10
 </pre>
 
 Now the models are all wired up and ready for action.  Let's start by associating the recipe record we created with the cookbook record.  We could access the database and populate the field but it's a lot more fun to use the rails console.  Go back to your terminal window and type:
