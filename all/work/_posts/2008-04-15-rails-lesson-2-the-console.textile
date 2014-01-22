@@ -42,13 +42,13 @@ rnorm(10)
 x <- 1:10</pre>
 
 
-<pre ><code class="R">
+<pre name="code" class="xml">
 install.packages('plyr')
 rnorm(10)
-x <- 1:10</code>
+x <- 1:10
 </pre>
 
-<pre><code class = "SQL"> select * from dba where x = 3 </code></pre>
+<pre><code class="SQL"> select * from dba where x = 3 </code></pre>
 
 Now the models are all wired up and ready for action.  Let's start by associating the recipe record we created with the cookbook record.  We could access the database and populate the field but it's a lot more fun to use the rails console.  Go back to your terminal window and type:
 
@@ -58,12 +58,11 @@ def foo
 end
 {% endhighlight %}
 
-<pre ><code class="ruby">
+<pre name="code" class="html">
 install.packages('plyr')
 rnorm(10)
 x <- 1:10
 for(i in 1:10)
-</code>
 </pre>
 
 <pre class="terminal">
