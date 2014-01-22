@@ -1,70 +1,67 @@
 ---
 layout: post
-title: "Rails Lesson #2: The Console"
+title: Git 常用命令总结
 ---
 
 h2. {{ page.title }}
 
-p(publish_date). 22 Apr 2008
+p(publish_date). 22 Jan 2014
 
 <notextile>
-<p>In <a href="/2008/04/14/yet-another-rails-tutorial.html">Lesson #1</a> We had a cookbook and a recipe but they weren't related to each other.  First we'll add a key to the recipes table then we'll use the console to relate the entities.</p>
 
-<p>When creating new objects we use the script/generate scaffold command.  Here we only want to change the existing recipes table so we generate a migration:</p>
+<h3>Git 配置:</h3>
+<pre class="terminal">git config --global user.name "incas56"
+git config --global user.email "incas56@gmail.com"
+git config -l
+</pre>
+
+<h3>Git 命令:</h3>
 <pre class="terminal">
-$ script/generate migration add_cookbook_id_to_recipes
-</pre>
-<p>
-This will create a file in the db/migrate folder called 003_add_cookbook_id_to_recipes.rb
-</p>
-<p>
-Open this file using your editor of choice and add the add_column and remove_column lines so that your file looks like the code below:
-</p>
-<pre name="code" class="ruby">
-class AddCookBookIdToRecipes < ActiveRecord::Migration
-  def self.up
-    add_column :recipes, :cookbook_id, :integer
-  end
+git help <command>  # 显示command的help
+git show            # 显示某次提交的内容
 
-  def self.down
-    remove_column :recipes, :cookbook_id
-  end
-end
+git add .           # 将所有修改过的工作文件提交暂存区
+
+git diff <file>     # 比较当前文件和暂存区文件差异
+git diff
+git diff <$id1> <$id2>   # 比较两次提交之间的差异
+git diff <branch1>..<branch2> # 在两个分支之间比较
+
+git log #查看提交记录
+
+git br -d <branch>  # 删除某个分支
+git br -D <branch>  # 强制删除某个分支 (未被合并的分支被删除的时候需要强制)
+
+git merge <branch>               # 将branch分支合并到当前分支
 </pre>
 
-Now rake the migration:
-<pre class="terminal">$ rake db:migrate</pre>
+<h3>Git 远程分支:</h3>
+git pull                         # 抓取远程仓库所有分支更新并合并到本地
+git pull --no-ff                 # 抓取远程仓库所有分支更新并合并到本地，不要快进合并
+git fetch origin                 # 抓取远程仓库更新
+git merge origin/master          # 将远程主分支合并到本地当前分支
+git co --track origin/branch     # 跟踪某个远程分支创建相应的本地分支
+git co -b <local_branch> origin/<remote_branch>  # 基于远程分支创建本地分支，功能同上
 
-Now that we have a foreign key in the table we need to tell the CookBook model that it has many Recipes and the Recipe model that it belongs to a CookBook.  So we open the model files in the app/model directory and add the lines shown below.
-
-<pre class="ruby">install.packages('plyr')
-rnorm(10)
-x <- 1:10</pre>
-
-
-<pre name="code" class="xml">
-install.packages('plyr')
-rnorm(10)
-x <- 1:10
+git push                         # push所有分支
+git push origin master           # 将本地主分支推到远程主分支
+git push -u origin master        # 将本地主分支推到远程(如无远程主分支则创建，用于初始化远程仓库)
+git push origin <local_branch>   # 创建远程分支， origin是远程仓库名
+git push origin <local_branch>:<remote_branch>  # 创建远程分支
+git push origin :<remote_branch>  #先删除本地分支(git br -d <branch>)，然后再push删除远程分支
 </pre>
 
-<pre name="code" class="sql"> select * from dba where x = 3 </pre>
-<pre name="code" class="Sql"> select * from dba where x = 4 </pre>
-Now the models are all wired up and ready for action.  Let's start by associating the recipe record we created with the cookbook record.  We could access the database and populate the field but it's a lot more fun to use the rails console.  Go back to your terminal window and type:
+<h3>Git 远程仓库:</h3>
+git remote -v                    # 查看远程服务器地址和仓库名称
+git clone --bare robbin_site robbin_site.git  # 用带版本的项目创建纯版本仓库
+scp -r my_project.git git@git.csdn.net:~      # 将纯仓库上传到服务器上
 
+mkdir robbin_site.git && cd robbin_site.git && git --bare init # 在服务器创建纯仓库
+git remote add origin git@github.com:robbin/robbin_site.git    # 设置远程仓库地址
+git push -u origin master                                      # 客户端首次提交
+git push -u origin develop  # 首次将本地develop分支提交到远程develop分支，并且track
 
-<div style="overflow:auto;"><div class="geshifilter"><pre class="r geshifilter-R" style="font-family:monospace;"><a href="http://inside-r.org/r-doc/utils/install.packages"><span style="color: #003399; font-weight: bold;">install.packages</span></a><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'plyr'</span><span style="color: #009900;">&#41;</span>
-<a href="http://inside-r.org/r-doc/stats/rnorm"><span style="color: #003399; font-weight: bold;">rnorm</span></a><span style="color: #009900;">&#40;</span><span style="color: #cc66cc;">10</span><span style="color: #009900;">&#41;</span>
-x <span style="">&lt;-</span> <span style="color: #cc66cc;">1</span><span style="">:</span><span style="color: #cc66cc;">10</span>
-<span style="color: #000000; font-weight: bold;">for</span><span style="color: #009900;">&#40;</span>i <span style="color: #000000; font-weight: bold;">in</span> <span style="color: #cc66cc;">1</span><span style="">:</span><span style="color: #cc66cc;">10</span><span style="color: #009900;">&#41;</span>
-y <span style="">&lt;-</span> <a href="http://inside-r.org/r-doc/base/function"><span style="color: #003399; font-weight: bold;">function</span></a><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #cc66cc;">1</span><span style="">+</span><span style="color: #cc66cc;">2</span></pre></div></div><p><a href="http://www.inside-r.org/pretty-r" title="Created by Pretty R at inside-R.org">Created by Pretty R at inside-R.org</a></p>
-
-atabase and populate the field but it's a lot mo
-
-<pre class="R">
-install.packages('plyr')
-rnorm(100)
-x <- 1:10
-z = c(1,2,3)
-for(i in 1:10)
+git remote set-head origin master   # 设置远程仓库的HEAD指向master分支
 </pre>
+
+
