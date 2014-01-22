@@ -48,8 +48,8 @@ rnorm(10)
 x <- 1:10
 </pre>
 
-<pre><code class="SQL"> select * from dba where x = 3 </code></pre>
-
+<pre name="code" class="sql"> select * from dba where x = 3 </pre>
+<pre name="code" class="Sql"> select * from dba where x = 4 </pre>
 Now the models are all wired up and ready for action.  Let's start by associating the recipe record we created with the cookbook record.  We could access the database and populate the field but it's a lot more fun to use the rails console.  Go back to your terminal window and type:
 
 {% highlight ruby %}
