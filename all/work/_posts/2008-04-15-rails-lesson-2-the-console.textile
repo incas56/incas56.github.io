@@ -72,11 +72,12 @@ x <- 1:10
 for(i in 1:10)
 </pre>
 
-<pre class="R">
+<pre class="brush: r">
 install.packages('plyr')
 rnorm(10)
 x <- 1:10
 for(i in 1:10)
+y <- function() 1+2
 </pre>
 
 <pre name="code" class="splus">
