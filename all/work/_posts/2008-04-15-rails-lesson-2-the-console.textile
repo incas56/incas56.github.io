@@ -52,6 +52,18 @@ x <- 1:10</code>
 
 Now the models are all wired up and ready for action.  Let's start by associating the recipe record we created with the cookbook record.  We could access the database and populate the field but it's a lot more fun to use the rails console.  Go back to your terminal window and type:
 
+{% highlight ruby %}
+def foo
+  puts 'foo'
+end
+{% endhighlight %}
+
+{% highlight r %}
+install.packages('plyr')
+rnorm(10)
+x <- 1:10
+for(i in 1:10) x <- i
+{% endhighlight %}
 
 <pre class="terminal">
 $ ruby script/console
