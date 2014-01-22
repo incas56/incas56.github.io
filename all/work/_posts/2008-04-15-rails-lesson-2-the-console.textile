@@ -65,7 +65,7 @@ x <- 1:10
 for(i in 1:10)
 </pre>
 
-<pre class="bush: r">
+<pre class="brush: r">
 install.packages('plyr')
 rnorm(10)
 x <- 1:10
