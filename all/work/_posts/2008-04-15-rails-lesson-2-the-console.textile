@@ -5,7 +5,7 @@ title: "Rails Lesson #2: The Console"
 
 h2. {{ page.title }}
 
-p(publish_date). 14 Apr 2008
+p(publish_date). 22 Apr 2008
 
 <notextile>
 <p>In <a href="/2008/04/14/yet-another-rails-tutorial.html">Lesson #1</a> We had a cookbook and a recipe but they weren't related to each other.  First we'll add a key to the recipes table then we'll use the console to relate the entities.</p>
@@ -42,7 +42,7 @@ rnorm(10)
 x <- 1:10</pre>
 
 
-<pre ><code class="">
+<pre ><code class="R">
 install.packages('plyr')
 rnorm(10)
 x <- 1:10</code>
@@ -58,12 +58,13 @@ def foo
 end
 {% endhighlight %}
 
-{% highlight r %}
+<pre ><code class="R">
 install.packages('plyr')
 rnorm(10)
 x <- 1:10
 for(i in 1:10)
-{% endhighlight %}
+</code>
+</pre>
 
 <pre class="terminal">
 $ ruby script/console
