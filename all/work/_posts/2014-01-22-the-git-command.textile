@@ -15,7 +15,6 @@ git config --global user.email "incas56@gmail.com"
 git config -l
 </pre>
 
-<notextile>
 <h3>Git 命令:</h3>
 <pre class="terminal">
 git help <command>             # 显示command的help
@@ -29,7 +28,6 @@ git br -d <branch>             # 删除某个分支
 git br -D <branch>             # 强制删除某个分支
 </pre>
 
-<notextile>
 <h3>Git 远程分支:</h3>
 <pre class="terminal">
 git pull                       # 抓取远程仓库所有分支更新并合并到本地
@@ -40,7 +38,7 @@ git push origin master         # 将本地主分支推到远程主分支
 git push -u origin master      # 将本地主分支推到远程(如无远程主分支则创建，用于初始化远程仓库)
 </pre>
 
-<notextile>
+
 <h3>Git 远程仓库:</h3>
 <pre class="terminal">
 git remote -v                  # 查看远程服务器地址和仓库名称
