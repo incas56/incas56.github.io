@@ -20,7 +20,7 @@ This will create a file in the db/migrate folder called 003_add_cookbook_id_to_r
 <p>
 Open this file using your editor of choice and add the add_column and remove_column lines so that your file looks like the code below:
 </p>
-<pre name="code" class="R">
+<pre name="code" class="ruby">
 class AddCookBookIdToRecipes < ActiveRecord::Migration
   def self.up
     add_column :recipes, :cookbook_id, :integer
@@ -37,16 +37,15 @@ Now rake the migration:
 
 Now that we have a foreign key in the table we need to tell the CookBook model that it has many Recipes and the Recipe model that it belongs to a CookBook.  So we open the model files in the app/model directory and add the lines shown below.
 
-<pre name="code" class="R">
-install.packages('plyr')
+<pre><code class="R">install.packages('plyr')
 rnorm(10)
-x <- 1:10
-</pre>
+x <- 1:10</code></pre>
 
-<pre name="code" class="r">
+
+<pre ><code class="r">
 install.packages('plyr')
 rnorm(10)
-x <- 1:10
+x <- 1:10</code>
 </pre>
 
 Now the models are all wired up and ready for action.  Let's start by associating the recipe record we created with the cookbook record.  We could access the database and populate the field but it's a lot more fun to use the rails console.  Go back to your terminal window and type:
