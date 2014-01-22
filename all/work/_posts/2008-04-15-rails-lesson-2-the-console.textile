@@ -20,7 +20,7 @@ This will create a file in the db/migrate folder called 003_add_cookbook_id_to_r
 <p>
 Open this file using your editor of choice and add the add_column and remove_column lines so that your file looks like the code below:
 </p>
-<pre name="code" class="dp-xml">
+<pre name="code" class="ruby">
 class AddCookBookIdToRecipes < ActiveRecord::Migration
   def self.up
     add_column :recipes, :cookbook_id, :integer
@@ -62,7 +62,7 @@ end
 install.packages('plyr')
 rnorm(10)
 x <- 1:10
-for(i in 1:10) x <- i
+for(i in 1:10)
 {% endhighlight %}
 
 <pre class="terminal">
