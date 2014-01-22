@@ -53,13 +53,11 @@ x <- 1:10
 Now the models are all wired up and ready for action.  Let's start by associating the recipe record we created with the cookbook record.  We could access the database and populate the field but it's a lot more fun to use the rails console.  Go back to your terminal window and type:
 
 
-<pre class="brush: r">
-install.packages('plyr')
-rnorm(10)
-x <- 1:10
-for(i in 1:10)
-y <- function() 1+2
-</pre>
+<div style="overflow:auto;"><div class="geshifilter"><pre class="r geshifilter-R" style="font-family:monospace;"><a href="http://inside-r.org/r-doc/utils/install.packages"><span style="color: #003399; font-weight: bold;">install.packages</span></a><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">'plyr'</span><span style="color: #009900;">&#41;</span>
+<a href="http://inside-r.org/r-doc/stats/rnorm"><span style="color: #003399; font-weight: bold;">rnorm</span></a><span style="color: #009900;">&#40;</span><span style="color: #cc66cc;">10</span><span style="color: #009900;">&#41;</span>
+x <span style="">&lt;-</span> <span style="color: #cc66cc;">1</span><span style="">:</span><span style="color: #cc66cc;">10</span>
+<span style="color: #000000; font-weight: bold;">for</span><span style="color: #009900;">&#40;</span>i <span style="color: #000000; font-weight: bold;">in</span> <span style="color: #cc66cc;">1</span><span style="">:</span><span style="color: #cc66cc;">10</span><span style="color: #009900;">&#41;</span>
+y <span style="">&lt;-</span> <a href="http://inside-r.org/r-doc/base/function"><span style="color: #003399; font-weight: bold;">function</span></a><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #cc66cc;">1</span><span style="">+</span><span style="color: #cc66cc;">2</span></pre></div></div><p><a href="http://www.inside-r.org/pretty-r" title="Created by Pretty R at inside-R.org">Created by Pretty R at inside-R.org</a></p>
 
 atabase and populate the field but it's a lot mo
 
