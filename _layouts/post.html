@@ -1,13 +1,14 @@
 ---
-
+layout: default
 ---
 <div id="post">
 {{ content }}
 </div>
-<link rel="stylesheet" href="styles/default.css">
-<script src="highlight.pack.js"></script>
+
+<script language="javascript" src="/javascripts/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<!-- This is for code colorization which doesn't seem to work very well in IE... i guess I don't care very much 
+
+<!-- This is for code colorization which doesn't seem to work very well in IE... i guess I don't care very much -->
 <script language="javascript" src="http://communicatopia.s3.amazonaws.com/js/shCore.js"></script>
 <script language="javascript" src="http://communicatopia.s3.amazonaws.com/js/shBrushRuby.js"></script>
 <script language="javascript" src="http://communicatopia.s3.amazonaws.com/js/shBrushPhp.js"></script>
@@ -20,4 +21,3 @@ dp.SyntaxHighlighter.ClipboardSwf = 'http://communicatopia.s3.amazonaws.com/js/c
 //name, showGutter, showControls, collapseAll, firstLine , showColumns
 dp.SyntaxHighlighter.HighlightAll('code',false, false,false,1,false);
 </script>
--->
