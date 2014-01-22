@@ -19,4 +19,4 @@ import os
 
 aaaa
 
-<pre><code class='R'>for(i in 1:10)</code></pre>
+<pre><code class='SQL'>select * from bva</code></pre>
