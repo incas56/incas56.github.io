@@ -52,25 +52,6 @@ x <- 1:10
 <pre name="code" class="Sql"> select * from dba where x = 4 </pre>
 Now the models are all wired up and ready for action.  Let's start by associating the recipe record we created with the cookbook record.  We could access the database and populate the field but it's a lot more fun to use the rails console.  Go back to your terminal window and type:
 
-{% highlight ruby %}
-def foo
-  puts 'foo'
-end
-{% endhighlight %}
-
-<pre name="code" class="r">
-install.packages('plyr')
-rnorm(10)
-x <- 1:10
-for(i in 1:10)
-</pre>
-
-<pre class="R">
-install.packages('plyr')
-rnorm(10)
-x <- 1:10
-for(i in 1:10)
-</pre>
 
 <pre class="brush: r">
 install.packages('plyr')
@@ -80,50 +61,12 @@ for(i in 1:10)
 y <- function() 1+2
 </pre>
 
-<pre class="r">
+atabase and populate the field but it's a lot mo
+
+<pre class="R">
 install.packages('plyr')
 rnorm(100)
 x <- 1:10
 z = c(1,2,3)
 for(i in 1:10)
 </pre>
-<pre class="terminal">
-$ ruby script/console
-Loading development environment (Rails 2.0.2)
->> []
-</pre>
-
-What is now staring you in the face is called the rails console which is a special version of the IRB (Interactive Ruby Prompt.)  This prompt will accept any valid ruby code.  Go ahead and write a hello world command:
-<notextile>
-<pre class="terminal">Loading development environment (Rails 2.0.2)
->> puts "hello world"
-hello world
-=> nil
->> []</pre>
-</notextile>
-Try typing these commands just for fun:
-
-<pre class="terminal">
->> 50.times { |n| puts "ruby is #{n} times better!" }
->> 6+49
->> 5*5
-</pre>
-
-The IRB is cool but what is special about the rails console is that it loads all your code and makes your models (and everything else) accessible for you to play with.  So let's take a look at what is in the database.
-
-<pre class="terminal">
->> CookBook.find(:all)
-=> [ an array containing any cookbooks you've created ]
->> Recipe.find(:all)
-=> [ an array containing any recipes you've created ]
-</pre>
-
-Assuming you only have one cookbook and one recipe we can use the following commands to retrieve the recipe from the database and store it in the variable r, then fetch the cookbook into variable c, and finally tell r that it belongs to c:
-<notextile>
-<pre class="terminal">>> r = Recipe.find(1)
->> c = CookBook.find(1)
->> r.cookbook = c
->> r.save</pre></notextile>
-
-The console is a very cool tool for quickly manually testing things or nudging data this way or that.
-</notextile>
