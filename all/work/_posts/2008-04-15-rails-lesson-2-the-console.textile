@@ -58,7 +58,7 @@ def foo
 end
 {% endhighlight %}
 
-<pre ><code class="R">
+<pre ><code class="ruby">
 install.packages('plyr')
 rnorm(10)
 x <- 1:10
