@@ -60,7 +60,7 @@ git push -u origin master      # 客户端首次提交
 <h3>Git 命令详解:</h3>
 <h4>git pull</h4>
 从其他的版本库（既可以是远程的也可以是本地的）将代码更新到本地，例如：
-<pre class = 'terminal'>git pull origin master </pre>
+<pre class='terminal'>git pull origin master </pre>
 就是将<strong>origin</strong>这个版本库的代码更新到本地的<strong>master</strong>主枝，该功能类似于<strong>SVN</strong>的<strong>update</strong>
 
 <h4>git add</h4>
