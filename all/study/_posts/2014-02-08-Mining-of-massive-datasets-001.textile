@@ -7,29 +7,16 @@ h2. {{ page.title }}
 
 p(publish_date). 08 feb 2014
 
-At the highest level of description, this book is about data mining. However,
-it focuses on data mining of very large amounts of data, that is, data so large
-it does not fit in main memory. Because of the emphasis on size, many of our
-examples are about the Web or data derived from the Web. Further, the book
-takes an algorithmic point of view: data mining is about applying algorithms
-to data, rather than using data to "train" a machine-learning engine of some
-sort.
+At the highest level of description, this book is about data mining. However, it focuses on data mining of very large amounts of data, that is, data so large it does not fit in main memory. Because of the emphasis on size, many of our examples are about the Web or data derived from the Web. Further, the book takes an algorithmic point of view: data mining is about applying algorithms to data, rather than using data to "train" a machine-learning engine of some sort.
 
 <p></p>
 
 <h3> The principal topics covered are:</h3>
-1. Distributed file systems and map-reduce as a tool for creating parallel
-algorithms that succeed on very large amounts of data.
-2. Similarity search, including the key techniques of minhashing and localitysensitive
-hashing.
-3. Data-stream processing and specialized algorithms for dealing with data
-that arrives so fast it must be processed immediately or lost.
-4. The technology of search engines, including Google’s PageRank, link-spam
-detection, and the hubs-and-authorities approach.
-5. Frequent-itemset mining, including association rules, market-baskets, the
-A-Priori Algorithm and its improvements.
-6. Algorithms for clustering very large, high-dimensional datasets.
-7. Two key problems for Web applications: managing advertising and recommendation
-systems.
-8. Algorithms for analyzing and mining the structure of very large graphs,
-especially social-network graphs.
+* Distributed file systems and map-reduce as a tool for creating parallel algorithms that succeed on very large amounts of data.
+* Similarity search, including the key techniques of minhashing and locality-sensitive hashing.
+* Data-stream processing and specialized algorithms for dealing with data that arrives so fast it must be processed immediately or lost.
+* The technology of search engines, including Google’s PageRank, link-spam detection, and the hubs-and-authorities approach.
+* Frequent-itemset mining, including association rules, market-baskets, the A-Priori Algorithm and its improvements.
+* Algorithms for clustering very large, high-dimensional datasets.
+* Two key problems for Web applications: managing advertising and recommendation systems.
+* Algorithms for analyzing and mining the structure of very large graphs, especially social-network graphs.
