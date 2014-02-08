@@ -15,25 +15,9 @@ p. Precisely describe what you want in the form of a computer program.
 
 p. Execute the code.
 
-The dplyr package makes each of these steps as fast and easy as possible by:
+<h3>Basic verbs</h3>
 
-- Elucidating the most common data manipulation operations, so that        your options are helpfully constrained when thinking about how to tackle a problem.
-
-- Providing simple functions that correspond to the most common data manipulation verbs, so that you can easily translate your thoughts into code.
-
-- Using efficient data storage backends, so that you spend as little time waiting for the computer as possible.
-
-The goal of this document is to introduce you to the basic tools that dplyr provides, and show how you to apply them to data frames. Other vignettes provide more details on specific topics:
-
--databases: as well as in memory data frames, dplyr also connects to databases. It allows you to work with remote, out-of-memory data, using exactly the same tools, because dplyr will translate your R code into the appropriate SQL.
-
--benchmark-baseball: see how dplyr compares to other tools for data manipulation on a realistic use case.
-
--window-functions: a window function is a variation on an aggregation function, where an aggregate functions n inputs to produce 1 output, a window function uses n inputs to produce n outputs.
-
-### Basic verbs
-
-dplyr can work with data frames as is, but if you're dealing with large data, it's worthwhile to convert them to a **_tbl_df_**: this is a wrapper around a data frame that won't accidentally print a lot of data to the screen.
+dplyr can work with data frames as is, but if you're dealing with large data, it's worthwhile to convert them to a <strong>tbl_df</strong>: this is a wrapper around a data frame that won't accidentally print a lot of data to the screen.
 
 <pre class="terminal">library(hflights)
 dim(hflights)
@@ -41,28 +25,28 @@ hflights_df <- tbl_df(hflights)
 hflights_df
 </pre>
 
->dplyr provides five basic data manipulation verbs that work on a single table: filter(), arrange(), select(), mutate() and summarise(). If you've used plyr before, many of these will be familar.
+dplyr provides five basic data manipulation verbs that work on a single table: filter(), arrange(), select(), mutate() and summarise(). If you've used plyr before, many of these will be familar.
 
-####Filter rows with filter()
+<h4>Filter rows with filter()</h4>
 
 filter() allows you to select a subset of the rows of a data frame. The first argument is the name of the data frame, and the second and subsequent are filtering expressions evaluated in the context of that data frame:
 
 For example, we can select all flights on January 1st with:
 
-```terminal
+<pre class='terminal'>
 filter(hflights_df, Month == 1, DayofMonth == 1)
-```
+</pre>
 This is equivalent to the more verbose:
 
-```terminal
+<pre class='terminal'>
 hflights[hflights$Month == 1 & hflights$DayofMonth == 1, ]
-```
+</pre>
 
 filter() works similarly to subset() except that you can give it any number of filtering conditions which are joined together with. You can use other boolean operators explicitly:
 
-```terminal
+<pre class='terminal'>
 filter(hflights_df, Month == 1 | Month == 2)
-```
+</pre>
 
 ####Arrange rows with arrange()
 
