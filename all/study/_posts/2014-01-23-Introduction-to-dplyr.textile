@@ -9,11 +9,11 @@ p(publish_date). 23 jan 2014
 
 When working with data you must:
 
-p. Figure out what you want to do.
+* Figure out what you want to do.
 
-p. Precisely describe what you want in the form of a computer program.
+* Precisely describe what you want in the form of a computer program.
 
-p. Execute the code.
+* Execute the code.
 
 <h3>Basic verbs</h3>
 
@@ -48,87 +48,87 @@ filter() works similarly to subset() except that you can give it any number of f
 filter(hflights_df, Month == 1 | Month == 2)
 </pre>
 
-####Arrange rows with arrange()
+<h4>Arrange rows with arrange()</h4>
 
 arrange() works similarly to filter() except that instead of filtering or selecting rows, it reorders them. It takes a data frame, and a set of column names (or more complicated expressions) to order by. If you provide more than one column name, each additional column will be used to break ties in the valeus of preceeding columns:
 
-```terminal
+<pre class='terminal'>
 arrange(hflights_df, DayofMonth, Month, Year)
-```
+</pre>
 
 Use desc() to order a order in descending order:
 
-```terminal
+<pre class='terminal'>
 arrange(hflights_df, desc(ArrDelay))
-```
+</pre>
 
 dplyr::arrange() works the same way as plyr::arrange(). It's a straighforward wrapper around order() that requires less typing. The previous code is equivalent to:
 
-```terminal
+<pre class='terminal'>
 hflights[order(hflights$DayofMonth, hflights$Month, hflights$Year), ]
 hflights[order(desc(hflights$ArrDelay)), ]
-```
+</pre>
 
-####Select columns with select()
+<h4>Select columns with select()</h4>
 
 Often you work with large datasets with many columns where only a few are actually of interest to you. select() allows you to rapidly zoom in on a useful subset using operations that usually only work on numeric variable positions:
 
-```terminal
+<pre class='terminal'>
 # Select columns by name
 select(hflights_df, Year, Month, DayOfWeek)
-```
+</pre>
 
-```terminal
+<pre class='terminal'>
 # Select all columns between Year and DayOfWeek (inclusive)
 select(hflights_df, Year:DayOfWeek)
-```
+</pre>
 
-```terminal
+<pre class='terminal'>
 # Select all columns except Year and DayOfWeek
 select(hflights_df, -(Year:DayOfWeek))
-```
+</pre>
 
 This function works similarly to the select argument to the base::subset(). It's its own function in dplyr, because the dplyr philosophy is to have small functions that each do one thing well.
 
-####Add new columns with mutate()
+<h4>Add new columns with mutate()</h4>
 
 As well as selecting from the set of existing columns, it's often useful to add new columns that are functions of existing columns. This is the job of mutate():
 
-```terminal
+<pre class='terminal'>
 mutate(hflights_df, gain = ArrDelay - DepDelay, speed = Distance /AirTime * 60)
-```
+</pre>
 
 dplyr::mutate() works the same way as plyr::mutate() and similarly to base::transform(). The key difference between mutate() and transform() is that mutate allows you to refer to columns that you just created:
 
-```terminal
+<pre class='terminal'>
 mutate(hflights_df, gain = ArrDelay - DepDelay, gain_per_hour = gain / (AirTime / 60))
-```
+</pre>
 
-```terminal
+<pre class='terminal'>
 transform(hflights, gain = ArrDelay - DepDelay, gain_per_hour = gain / (AirTime / 60))
 #> Error: object 'gain' not found
-```
+</pre>
 
-####Summarise values with summarise()
+<h4>Summarise values with summarise()</h4>
 
 The last verb is summarise(), which collapses a data frame to a single row. It's not very useful yet:
 
-```terminal
+<pre class='terminal'>
 summarise(hflights_df, delay = mean(DepDelay, na.rm = TRUE))
-```
+</pre>
 
 This is exactly equivalent to plyr::summarise().
 
 
-###Commonalities
+<h3>Commonalities</h3>
 
 You may have noticed that all these functions are very similar:
 
-*The first argument is a data frame.
+* The first argument is a data frame.
 
-*The subsequent arguments describe what to do with it, and you can refer to columns in the data frame directly without using $.
+* The subsequent arguments describe what to do with it, and you can refer to columns in the data frame directly without using $.
 
-*The result is a new data frame
+* The result is a new data frame
 
 Together these properties make it easy to chain together multiple simple steps to achieve a complex result.
 
