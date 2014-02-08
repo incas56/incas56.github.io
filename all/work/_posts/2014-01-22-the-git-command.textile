@@ -60,7 +60,7 @@ git push -u origin master      # 客户端首次提交
 <h3>Git 命令详解:</h3>
 <h4>git pull</h4>
 从其他的版本库（既可以是远程的也可以是本地的）将代码更新到本地，例如：
-<pre class = "terminal">git pull origin master</pre>
+<pre class = 'terminal'>git pull origin master </pre>
 就是将<strong>origin</strong>这个版本库的代码更新到本地的<strong>master</strong>主枝，该功能类似于<strong>SVN</strong>的<strong>update</strong>
 
 <h4>git add</h4>
@@ -68,10 +68,10 @@ git push -u origin master      # 客户端首次提交
 例如<pre class='terminal'>git add app/model/user.rb</pre>就会增加app/model/user.rb文件到<strong>Git</strong>的索引中，该功能类似于<strong>SVN</strong>的<strong>add</strong>
 
 <h4>git rm</h4>从当前的工作空间中和索引中删除文件，例如<pre class='terminal'>git rm app/model/user.rb</pre>，该功能类似于<strong>SVN</strong>的rm、del
-<h4>git commit</h4>提交当前工作空间的修改内容，类似于SVN的commit命令，例如'git commit -m story #3, add user model'，提交的时候必须用-m来输入一条提交信息，该功能类似于SVN的commit
-git push：将本地commit的代码更新到远程版本库中，例如'git push origin'就会将本地的代码更新到名为orgin的远程版本库中
-git log：查看历史日志，该功能类似于SVN的log
-git revert：还原一个版本的修改，必须提供一个具体的Git版本号，例如'git revert bbaf6fb5060b4875b18ff9ff637ce118256d6f20'，Git的版本号都是生成的一个哈希值
+<h4>git commit</h4>提交当前工作空间的修改内容，类似于SVN的commit命令，例如<pre class='terminal'>git commit -m story #3, add user model</pre>，提交的时候必须用-m来输入一条提交信息，该功能类似于SVN的commit
+<h4>git push</h4>将本地commit的代码更新到远程版本库中，例如<pre class='terminal'>git push origin</pre>就会将本地的代码更新到名为orgin的远程版本库中
+<h4>git log</h4>查看历史日志，该功能类似于SVN的log
+<h4>git revert</h4>还原一个版本的修改，必须提供一个具体的Git版本号，例如<pre class='terminal'>git revert bbaf6fb5060b4875b18ff9ff637ce118256d6f20</pre>，Git的版本号都是生成的一个哈希值
 
 
 
