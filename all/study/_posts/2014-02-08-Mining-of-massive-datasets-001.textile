@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Mining of Massive Datasets 001
+title: Mining of Massive Datasets-001
 ---
 
 h2. {{ page.title }}
 
 p(publish_date). 08 feb 2014
 
-At the highest level of description, this book is about data mining. However, it focuses on data mining of very large amounts of data, that is, data so large it does not fit in main memory. Because of the emphasis on size, many of our examples are about the Web or data derived from the Web. Further, the book takes an algorithmic point of view: data mining is about applying algorithms to data, rather than using data to "train" a machine-learning engine of some sort.
+At the highest level of description, this book is about data mining. However, it focuses on data mining of very large amounts of data, that is, data so large it does not fit in main memory. Because of the emphasis on size, many of our examples are about the Web or data derived from the Web. Further, the book takes an algorithmic point of view: <strong>data mining is about applying algorithms to data</strong>, rather than using data to "train" a machine-learning engine of some sort.
 
 <p></p>
 
