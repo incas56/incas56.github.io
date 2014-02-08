@@ -8,6 +8,13 @@ h2. {{ page.title }}
 p(publish_date). 22 Jan 2014
 
 <p></p>
+<h3>Git 常用:</h3>
+<pre class="terminal">
+git add --all
+git commit -m origin
+git push origin master
+</pre>
+<p></p>
 <h3>Git 配置:</h3>
 <pre class="terminal">
 git config --global user.name "incas56"
